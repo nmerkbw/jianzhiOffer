@@ -15,24 +15,27 @@ public class IsBalancedTree {
         }
     }
 
+    private boolean isBalanced = true;
+
     public boolean IsBalanced_Solution(TreeNode root) {
 
-        int countL = getTreeLeftDepth(root);
-        int countR = getTreeRightDepth(root);
-        if (Math.abs(countL - countR) <= 1) {
-            return true;
+        getTreeDepth(root);
+        return isBalanced;
+    }
+
+    private int getTreeDepth(TreeNode node) {
+
+        if (node == null || !isBalanced) {
+            return 0;
         }
-        return false;
-    }
-
-    private int getTreeLeftDepth(TreeNode node) {
-
-        return (node == null) ? 0 : 1 + getTreeLeftDepth(node.left);
-    }
-
-    private int getTreeRightDepth(TreeNode node) {
-
-        return (node == null) ? 0 : 1 + getTreeRightDepth(node.right);
+        int left = 1 + getTreeDepth(node.left);
+        int right = 1 + getTreeDepth(node.right);
+        if (Math.abs(left - right) <= 1) {
+            isBalanced = true;
+        } else {
+            isBalanced = false;
+        }
+        return Math.max(left, right);
     }
 
     @Test
@@ -43,7 +46,7 @@ public class IsBalancedTree {
         node.right = new TreeNode(8);
         node.left.left = new TreeNode(1);
         node.left.right = new TreeNode(3);
-        node.left.right.right = new TreeNode(4);
+        //node.left.right.right = new TreeNode(4);
 
         System.out.println(IsBalanced_Solution(node));
     }
