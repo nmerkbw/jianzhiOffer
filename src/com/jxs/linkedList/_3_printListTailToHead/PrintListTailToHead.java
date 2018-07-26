@@ -1,4 +1,4 @@
-package com.jxs.printListTailToHead;
+package com.jxs.linkedList._3_printListTailToHead;
 
 import org.junit.Test;
 
