@@ -1,4 +1,4 @@
-package com.jxs.minNumberInRotateArray;
+package com.jxs.array._2_minNumberInRotateArray;
 
 import org.junit.Test;
 
@@ -18,14 +18,14 @@ public class MinNumberInRotateArray {
         }
 
         int index = 0;
-        for (int i = 0; i < array.length; i++) {
-            if (i < array.length - 1 && array[i] <= array[i + 1]) {
-                index = i + 1;
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] >= array[i - 1]) {
                 continue;
             }
+            index = i;
             break;
         }
-        return array[index + 1];
+        return array[index];
     }
 
     @Test
