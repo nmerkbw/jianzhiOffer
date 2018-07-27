@@ -1,4 +1,4 @@
-package com.jxs.twoStackRealizeQueue;
+package com.jxs.stackAndQueue._5_twoStackRealizeQueue;
 
 import org.junit.Test;
 
