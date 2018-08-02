@@ -1,4 +1,4 @@
-package com.jxs.reOrderArray;
+package com.jxs.array._13_reOrderArray;
 
 import org.junit.Test;
 

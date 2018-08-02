@@ -1,4 +1,4 @@
-package com.jxs.findKthToTail;
+package com.jxs.linkedList._14_findKthToTail;
 
 import org.junit.Test;
 
@@ -18,7 +18,7 @@ public class FindKthToTail {
         }
     }
 
-    public ListNode findKthToTail(ListNode head,int k) {
+    public ListNode findKthToTailSolution1(ListNode head,int k) {
 
         if (head == null || k == 0) {
             return null;
@@ -37,6 +37,30 @@ public class FindKthToTail {
         return node2;
     }
 
+    /**
+     * 快慢指针方法
+     * 自己写的
+     * */
+    public ListNode findKthToTailSolution2(ListNode head,int k) {
+
+        if (k == 0 || head == null) {
+            return null;
+        }
+        ListNode slowNode = head;
+        ListNode fastNode = head;
+        while (--k > 0 && fastNode != null) {
+            fastNode = fastNode.next;
+        }
+        if (fastNode == null) {
+            return null;
+        }
+        while (fastNode.next != null) {
+            slowNode = slowNode.next;
+            fastNode = fastNode.next;
+        }
+        return slowNode;
+    }
+
     @Test
     public void test() {
 
@@ -47,7 +71,7 @@ public class FindKthToTail {
         node.next.next.next.next = new ListNode(5);
         //node.next.next.next.next.next = new ListNode(6);
 
-        ListNode returnNode = findKthToTail(node, 6);
+        ListNode returnNode = findKthToTailSolution1(node, 6);
         System.out.println(returnNode.val);
     }
 }

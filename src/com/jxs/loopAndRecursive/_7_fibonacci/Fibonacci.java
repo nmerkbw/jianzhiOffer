@@ -1,4 +1,4 @@
-package com.jxs.fibonacci;
+package com.jxs.loopAndRecursive._7_fibonacci;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.jxs.power;
+package com.jxs._12_power;
 
 import org.junit.Test;
 

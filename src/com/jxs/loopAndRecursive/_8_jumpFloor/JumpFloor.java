@@ -1,10 +1,10 @@
-package com.jxs.jumpFloor;
+package com.jxs.loopAndRecursive._8_jumpFloor;
 
 import org.junit.Test;
 
-public class JumpFloorII {
+public class JumpFloor {
 
-    public int jumpFloorII(int target) {
+    public int JumpFloor(int target) {
 
         if (target <= 2) {
             return target;
@@ -13,9 +13,8 @@ public class JumpFloorII {
         int sum = 0;
         int s1 = 1;
         int s2 = 2;
-        // 第n阶台阶：2*(n1+n2)-n1
         for (int i = 3; i <= target; i++) {
-            sum = 2 * s1 + s2;
+            sum = s1 + s2;
             s1 = s2;
             s2 = sum;
         }
@@ -25,6 +24,6 @@ public class JumpFloorII {
     @Test
     public void test() {
 
-        System.out.println(jumpFloorII(20));
+        System.out.println(JumpFloor(2));
     }
 }

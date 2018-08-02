@@ -1,4 +1,4 @@
-package com.jxs.numberOf1;
+package com.jxs.bitOperation._11_numberOf1;
 
 import org.junit.Test;
 
@@ -17,6 +17,6 @@ public class NumberOf1 {
     @Test
     public void test() {
 
-        System.out.println(NumberOf1(-9));
+        System.out.println(NumberOf1(-5));
     }
 }
