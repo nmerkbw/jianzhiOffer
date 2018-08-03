@@ -1,4 +1,4 @@
-package com.jxs.reverseList;
+package com.jxs.linkedList._15_reverseList;
 
 import org.junit.Test;
 

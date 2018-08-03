@@ -1,4 +1,4 @@
-package com.jxs.listMerge;
+package com.jxs.linkedList._16_listMerge;
 
 import org.junit.Test;
 
