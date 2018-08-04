@@ -1,4 +1,4 @@
-package com.jxs.stackMin;
+package com.jxs.stackAndQueue._20_stackMin;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.jxs.printMatrix;
+package com.jxs.array._19_printMatrix_NNN;
 
 import org.junit.Test;
 
