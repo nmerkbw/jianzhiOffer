@@ -1,4 +1,4 @@
-package com.jxs.hasSubtree;
+package com.jxs.tree._17_hasSubtree;
 
 import org.junit.Test;
 
